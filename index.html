@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Taxonomy Dash</title>
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="http://code.jquery.com/jquery-2.2.4.min.js"></script>
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link rel="icon" href="img/favicon.ico" type="image/x-icon">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+</head>
+<body>
+	<header class="header">
+		<div class="header__logo">
+			<h1 class="site-logo">
+				<img src="/img/svg/folder-search.svg" alt="WordPress Taxonomy Inspector Icon">
+				<span>Taxonomy Inspector</span>
+				<img class="site-logo__help" src="/img/svg/help.svg" alt="Help icon">
+				<span class="site-logo__about">
+					<p>The following tables show the taxonomy distribution of various sites. Some publications may not use categories or tags, but this will give a general idea of their respective subject grouping and frequency.</p>
+				</span>
+			</h1>
+		</div>
+		<div class="header__select">
+			<select name="siteSelect" id="siteSelect">
+				<option value="rare.us">Rare.us</option>
+				<option value="techcrunch.com">TechCrunch</option>
+				<option value="wired.com">Wired</option>
+				<option value="variety.com">Variety</option>
+				<option value="time.com">Time</option>
+				<option value="nypost.com">New York Post</option>
+				<option value="venturebeat.com">VentureBeat</option>
+				<option value="fanbuzz.com">Fanbuzz</option>
+				<option value="ftw.usatoday.com">For The Win (USA Today)</option>
+				<option value="mmajunkie.com">MMA Junkie (USA Today)</option>
+				<option value="usatodayhss.com">High School Sports (USA Today)</option>
+				<option value="hottopics.tv">Hot Topics</option>
+				<option value="rarecountry.com">Rare Country</option>
+				<option value="clark.com">Clark</option>
+			</select>
+		</div>
+		<form action="" class="form">
+			<input type="text" name="siteInput" id="siteInput" placeholder="Find Another WordPress site">
+			<button id="go" class="btn">Go</button>
+		</form>
+		<button id="download" class="btn btn-download">Download CSV</button>
+	</header>
+	<div class="page-title">
+		<h3 class="page-title__title" id="siteTitle"></h3>
+		<div class="page-title__inner">
+			<p id="siteDesc"></p>
+		</div>
+	</div>
+	<div class="grid">
+		<div class="grid__block">
+			<h2 class="tax-label">Categories</h2>
+			<table id="data" class="table">
+				<thead>
+					<tr><th data-label="name">Name</th><th data-label="count">Count</th></tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+		<div class="grid__block">
+			<h2 class="tax-label">Tags</h2>
+			<table id="dataTags" class="table">
+				<thead>
+					<tr><th data-label="name">Name</th><th data-label="count">Count</th></tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</div>
+    <script src="js/script.js"></script>
+</body>
+</html>
